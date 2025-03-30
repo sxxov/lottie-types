@@ -1,101 +1,22 @@
-export declare enum TextType {
-  // Text type
-  /** @deprecated Use {@linkcode TextType.Based.Characters} */
-  Characters = TextType.Based.Characters,
-  /** @deprecated Use {@linkcode TextType.Based.CharacterExcludingSpaces} */
-  CharacterExcludingSpaces = TextType.Based.CharacterExcludingSpaces,
-  /** @deprecated Use {@linkcode TextType.Based.Words} */
-  Words = TextType.Based.Words,
-  /** @deprecated Use {@linkcode TextType.Based.Lines} */
-  Lines = TextType.Based.Lines,
+import { Helpers } from "../helpers";
 
-  // Text caps
-  /** @deprecated Use {@linkcode TextType.Caps.Regular} */
-  Regular = TextType.Caps.Regular,
-  /** @deprecated Use {@linkcode TextType.Caps.AllCaps} */
-  AllCaps = TextType.Caps.AllCaps,
-  /** @deprecated Use {@linkcode TextType.Caps.SmallCaps} */
-  SmallCaps = TextType.Caps.SmallCaps,
+export type TextType = Helpers.Values<typeof TextType>;
+export namespace TextType {
+  export type Based = Helpers.Values<typeof Based>;
+  export namespace Based {
+    export type Value = Based;
 
-  // Grouping
-  /** @deprecated Use {@linkcode TextType.Grouping.Word} */
-  Word = TextType.Grouping.Word,
-  /** @deprecated Use {@linkcode TextType.Grouping.Line} */
-  Line = TextType.Grouping.Line,
-  /** @deprecated Use {@linkcode TextType.Grouping.All} */
-  All = TextType.Grouping.All,
-
-  // Justify
-  /** @deprecated Use {@linkcode TextType.Justify.Left} */
-  Left = TextType.Justify.Left,
-  /** @deprecated Use {@linkcode TextType.Justify.Right} */
-  Right = TextType.Justify.Right,
-  /** @deprecated Use {@linkcode TextType.Justify.Center} */
-  Center = TextType.Justify.Center,
-  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineLeft} */
-  WithLastLineLeft = TextType.Justify.WithLastLineLeft,
-  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineRight} */
-  WithLastLineRight = TextType.Justify.WithLastLineRight,
-  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineCenter} */
-  WithLastLineCenter = TextType.Justify.WithLastLineCenter,
-  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineFull} */
-  WithLastLineFull = TextType.Justify.WithLastLineFull,
-
-  // Shape
-  /** @deprecated Use {@linkcode TextType.Shape.Square} */
-  Square = TextType.Shape.Square,
-  /** @deprecated Use {@linkcode TextType.Shape.RampUp} */
-  RampUp = TextType.Shape.RampUp,
-  /** @deprecated Use {@linkcode TextType.Shape.RampDown} */
-  RampDown = TextType.Shape.RampDown,
-  /** @deprecated Use {@linkcode TextType.Shape.Triangle} */
-  Triangle = TextType.Shape.Triangle,
-  /** @deprecated Use {@linkcode TextType.Shape.Round} */
-  Round = TextType.Shape.Round,
-  /** @deprecated Use {@linkcode TextType.Shape.Smooth} */
-  Smooth = TextType.Shape.Smooth,
-
-  // Font path origin
-  /** @deprecated Use {@linkcode TextType.FontPathOrigin.Local} */
-  Local = TextType.FontPathOrigin.Local,
-  /** @deprecated Use {@linkcode TextType.FontPathOrigin.CssUrl} */
-  CssUrl = TextType.FontPathOrigin.CssUrl,
-  /** @deprecated Use {@linkcode TextType.FontPathOrigin.ScriptUrl} */
-  ScriptUrl = TextType.FontPathOrigin.ScriptUrl,
-  /** @deprecated Use {@linkcode TextType.FontPathOrigin.FontUrl} */
-  FontUrl = TextType.FontPathOrigin.FontUrl,
-
-  // Vertical justify
-  /** @deprecated Use {@linkcode TextType.VerticalJustify.Top} */
-  VerticalJustifyTop = TextType.VerticalJustify.Top,
-  /** @deprecated Use {@linkcode TextType.VerticalJustify.Center} */
-  VerticalJustifyCenter = TextType.VerticalJustify.Center,
-  /** @deprecated Use {@linkcode TextType.VerticalJustify.Bottom} */
-  VerticalJustifyBottom = TextType.VerticalJustify.Bottom,
-
-  // Range selector mode
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Add} */
-  Add = TextType.RangeSelectorMode.Add,
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Subtract} */
-  Subtract = TextType.RangeSelectorMode.Subtract,
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Intersect} */
-  Intersect = TextType.RangeSelectorMode.Intersect,
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Min} */
-  Min = TextType.RangeSelectorMode.Min,
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Max} */
-  Max = TextType.RangeSelectorMode.Max,
-  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Difference} */
-  Difference = TextType.RangeSelectorMode.Difference,
-}
-export declare namespace TextType {
-  enum Based {
-    Characters = 1,
-    CharacterExcludingSpaces = 2,
-    Words = 3,
-    Lines = 4,
+    export const Characters = 1;
+    export type Characters = typeof Characters;
+    export const CharacterExcludingSpaces = 2;
+    export type CharacterExcludingSpaces = typeof CharacterExcludingSpaces;
+    export const Words = 3;
+    export type Words = typeof Words;
+    export const Lines = 4;
+    export type Lines = typeof Lines;
   }
-  /** @deprecated Use the {@linkcode TextType.Based} enum */
-  const enum BASED {
+  /** @deprecated Use the {@linkcode TextType.Based} namespace */
+  export enum BASED {
     CHARACTERS = Based.Characters,
     CHARACTER_EXCLUDING_SPACES = Based.CharacterExcludingSpaces,
     WORDS = Based.Words,
@@ -105,26 +26,38 @@ export declare namespace TextType {
   /**
    * @default 0
    */
-  enum Caps {
-    Regular = 0,
-    AllCaps = 1,
-    SmallCaps = 2,
+  export type Caps = Helpers.Values<typeof Caps>;
+  export namespace Caps {
+    export type Value = Caps;
+
+    export const Regular = 0;
+    export type Regular = typeof Regular;
+    export const AllCaps = 1;
+    export type AllCaps = typeof AllCaps;
+    export const SmallCaps = 2;
+    export type SmallCaps = typeof SmallCaps;
   }
-  /** @deprecated Use the {@linkcode TextType.Caps} enum */
-  const enum TEXT_CAPS {
+  export enum TEXT_CAPS {
     REGULAR = Caps.Regular,
     ALL_CAPS = Caps.AllCaps,
     SMALL_CAPS = Caps.SmallCaps,
   }
 
-  enum Grouping {
-    Characters = 1,
-    Word = 2,
-    Line = 3,
-    All = 4,
+  export type Grouping = Helpers.Values<typeof Grouping>;
+  export namespace Grouping {
+    export type Value = Grouping;
+
+    export const Characters = 1;
+    export type Characters = typeof Characters;
+    export const Word = 2;
+    export type Word = typeof Word;
+    export const Line = 3;
+    export type Line = typeof Line;
+    export const All = 4;
+    export type All = typeof All;
   }
-  /** @deprecated Use the {@linkcode TextType.Grouping} enum */
-  const enum GROUPING {
+  /** @deprecated Use the {@linkcode TextType.Grouping} namespace */
+  export enum GROUPING {
     CHARACTERS = Grouping.Characters,
     WORD = Grouping.Word,
     LINE = Grouping.Line,
@@ -136,17 +69,27 @@ export declare namespace TextType {
    *
    * @default 0
    */
-  enum Justify {
-    Left = 0,
-    Right = 1,
-    Center = 2,
-    WithLastLineLeft = 3,
-    WithLastLineRight = 4,
-    WithLastLineCenter = 5,
-    WithLastLineFull = 6,
+  export type Justify = Helpers.Values<typeof Justify>;
+  export namespace Justify {
+    export type Value = Justify;
+
+    export const Left = 0;
+    export type Left = typeof Left;
+    export const Right = 1;
+    export type Right = typeof Right;
+    export const Center = 2;
+    export type Center = typeof Center;
+    export const WithLastLineLeft = 3;
+    export type WithLastLineLeft = typeof WithLastLineLeft;
+    export const WithLastLineRight = 4;
+    export type WithLastLineRight = typeof WithLastLineRight;
+    export const WithLastLineCenter = 5;
+    export type WithLastLineCenter = typeof WithLastLineCenter;
+    export const WithLastLineFull = 6;
+    export type WithLastLineFull = typeof WithLastLineFull;
   }
-  /** @deprecated Use the {@linkcode TextType.Justify} enum */
-  const enum JUSTIFY {
+  /** @deprecated Use the {@linkcode TextType.Justify} namespace */
+  export enum JUSTIFY {
     LEFT = Justify.Left,
     RIGHT = Justify.Right,
     CENTER = Justify.Center,
@@ -156,16 +99,25 @@ export declare namespace TextType {
     WITH_LAST_LINE_FULL = Justify.WithLastLineFull,
   }
 
-  enum Shape {
-    Square = 1,
-    RampUp = 2,
-    RampDown = 3,
-    Triangle = 4,
-    Round = 5,
-    Smooth = 6,
+  export type Shape = Helpers.Values<typeof Shape>;
+  export namespace Shape {
+    export type Value = Shape;
+
+    export const Square = 1;
+    export type Square = typeof Square;
+    export const RampUp = 2;
+    export type RampUp = typeof RampUp;
+    export const RampDown = 3;
+    export type RampDown = typeof RampDown;
+    export const Triangle = 4;
+    export type Triangle = typeof Triangle;
+    export const Round = 5;
+    export type Round = typeof Round;
+    export const Smooth = 6;
+    export type Smooth = typeof Smooth;
   }
-  /** @deprecated Use the {@linkcode TextType.Shape} enum */
-  const enum SHAPE {
+  /** @deprecated Use the {@linkcode TextType.Shape} namespace */
+  export enum SHAPE {
     SQUARE = Shape.Square,
     RAMP_UP = Shape.RampUp,
     RAMP_DOWN = Shape.RampDown,
@@ -174,42 +126,64 @@ export declare namespace TextType {
     SMOOTH = Shape.Smooth,
   }
 
-  enum FontPathOrigin {
-    Local = 0,
-    CssUrl = 1,
-    ScriptUrl = 2,
-    FontUrl = 3,
+  export type FontPathOrigin = Helpers.Values<typeof FontPathOrigin>;
+  export namespace FontPathOrigin {
+    export type Value = FontPathOrigin;
+
+    export const Local = 0;
+    export type Local = typeof Local;
+    export const CssUrl = 1;
+    export type CssUrl = typeof CssUrl;
+    export const ScriptUrl = 2;
+    export type ScriptUrl = typeof ScriptUrl;
+    export const FontUrl = 3;
+    export type FontUrl = typeof FontUrl;
   }
-  /** @deprecated Use the {@linkcode TextType.FontPathOrigin} enum */
-  enum FONT_PATH_ORIGIN {
+  /** @deprecated Use the {@linkcode TextType.FontPathOrigin} namespace */
+  export enum FONT_PATH_ORIGIN {
     LOCAL = FontPathOrigin.Local,
     CSS_URL = FontPathOrigin.CssUrl,
     SCRIPT_URL = FontPathOrigin.ScriptUrl,
     FONT_URL = FontPathOrigin.FontUrl,
   }
 
-  enum VerticalJustify {
-    Top = 0,
-    Center = 1,
-    Bottom = 2,
+  export type VerticalJustify = Helpers.Values<typeof VerticalJustify>;
+  export namespace VerticalJustify {
+    export type Value = VerticalJustify;
+
+    export const Top = 0;
+    export type Top = typeof Top;
+    export const Center = 1;
+    export type Center = typeof Center;
+    export const Bottom = 2;
+    export type Bottom = typeof Bottom;
   }
-  /** @deprecated Use the {@linkcode TextType.VerticalJustify} enum */
-  const enum VERTICAL_JUSTIFY {
+  /** @deprecated Use the {@linkcode TextType.VerticalJustify} namespace */
+  export enum VERTICAL_JUSTIFY {
     TOP = VerticalJustify.Top,
     CENTER = VerticalJustify.Center,
     BOTTOM = VerticalJustify.Bottom,
   }
 
-  enum RangeSelectorMode {
-    Add = 0,
-    Subtract = 1,
-    Intersect = 2,
-    Min = 3,
-    Max = 4,
-    Difference = 5,
+  export type RangeSelectorMode = Helpers.Values<typeof RangeSelectorMode>;
+  export namespace RangeSelectorMode {
+    export type Value = RangeSelectorMode;
+
+    export const Add = 0;
+    export type Add = typeof Add;
+    export const Subtract = 1;
+    export type Subtract = typeof Subtract;
+    export const Intersect = 2;
+    export type Intersect = typeof Intersect;
+    export const Min = 3;
+    export type Min = typeof Min;
+    export const Max = 4;
+    export type Max = typeof Max;
+    export const Difference = 5;
+    export type Difference = typeof Difference;
   }
-  /** @deprecated Use the {@linkcode TextType.RangeSelectorMode} enum */
-  const enum RANGE_SELECTOR_MODE {
+  /** @deprecated Use the {@linkcode TextType.RangeSelectorMode} namespace */
+  export enum RANGE_SELECTOR_MODE {
     ADD = RangeSelectorMode.Add,
     SUBTRACT = RangeSelectorMode.Subtract,
     INTERSECT = RangeSelectorMode.Intersect,
@@ -217,4 +191,104 @@ export declare namespace TextType {
     MAX = RangeSelectorMode.Max,
     DIFFERENCE = RangeSelectorMode.Difference,
   }
+
+  /** @deprecated Use {@linkcode TextType.Based.Characters} or {@linkcode TextType.Grouping.Characters} */
+  export const Characters = Based.Characters;
+  export type Characters = typeof Characters;
+  /** @deprecated Use {@linkcode TextType.Based.CharacterExcludingSpaces} */
+  export const CharacterExcludingSpaces = Based.CharacterExcludingSpaces;
+  export type CharacterExcludingSpaces = typeof CharacterExcludingSpaces;
+  /** @deprecated Use {@linkcode TextType.Based.Words} */
+  export const Words = Based.Words;
+  export type Words = typeof Words;
+  /** @deprecated Use {@linkcode TextType.Based.Lines} */
+  export const Lines = Based.Lines;
+  export type Lines = typeof Lines;
+  /** @deprecated Use {@linkcode TextType.Grouping.Word} */
+  export const Word = Grouping.Word;
+  export type Word = typeof Word;
+  /** @deprecated Use {@linkcode TextType.Grouping.Line} */
+  export const Line = Grouping.Line;
+  export type Line = typeof Line;
+  /** @deprecated Use {@linkcode TextType.Grouping.All} */
+  export const All = Grouping.All;
+  export type All = typeof All;
+  /** @deprecated Use {@linkcode TextType.Justify.Left} */
+  export const Left = Justify.Left;
+  export type Left = typeof Left;
+  /** @deprecated Use {@linkcode TextType.Justify.Right} */
+  export const Right = Justify.Right;
+  export type Right = typeof Right;
+  /** @deprecated Use {@linkcode TextType.Justify.Center} */
+  export const Center = Justify.Center;
+  export type Center = typeof Center;
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineLeft} */
+  export const WithLastLineLeft = Justify.WithLastLineLeft;
+  export type WithLastLineLeft = typeof WithLastLineLeft;
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineRight} */
+  export const WithLastLineRight = Justify.WithLastLineRight;
+  export type WithLastLineRight = typeof WithLastLineRight;
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineCenter} */
+  export const WithLastLineCenter = Justify.WithLastLineCenter;
+  export type WithLastLineCenter = typeof WithLastLineCenter;
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineFull} */
+  export const WithLastLineFull = Justify.WithLastLineFull;
+  export type WithLastLineFull = typeof WithLastLineFull;
+  /** @deprecated Use {@linkcode TextType.Shape.Square} */
+  export const Square = Shape.Square;
+  export type Square = typeof Square;
+  /** @deprecated Use {@linkcode TextType.Shape.RampUp} */
+  export const RampUp = Shape.RampUp;
+  export type RampUp = typeof RampUp;
+  /** @deprecated Use {@linkcode TextType.Shape.RampDown} */
+  export const RampDown = Shape.RampDown;
+  export type RampDown = typeof RampDown;
+  /** @deprecated Use {@linkcode TextType.Shape.Triangle} */
+  export const Triangle = Shape.Triangle;
+  export type Triangle = typeof Triangle;
+  /** @deprecated Use {@linkcode TextType.Shape.Round} */
+  export const Round = Shape.Round;
+  export type Round = typeof Round;
+  /** @deprecated Use {@linkcode TextType.Shape.Smooth} */
+  export const Smooth = Shape.Smooth;
+  export type Smooth = typeof Smooth;
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.Local} */
+  export const Local = FontPathOrigin.Local;
+  export type Local = typeof Local;
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.CssUrl} */
+  export const CssUrl = FontPathOrigin.CssUrl;
+  export type CssUrl = typeof CssUrl;
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.ScriptUrl} */
+  export const ScriptUrl = FontPathOrigin.ScriptUrl;
+  export type ScriptUrl = typeof ScriptUrl;
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.FontUrl} */
+  export const FontUrl = FontPathOrigin.FontUrl;
+  export type FontUrl = typeof FontUrl;
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Top} */
+  export const VerticalJustifyTop = VerticalJustify.Top;
+  export type VerticalJustifyTop = typeof VerticalJustifyTop;
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Center} */
+  export const VerticalJustifyCenter = VerticalJustify.Center;
+  export type VerticalJustifyCenter = typeof VerticalJustifyCenter;
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Bottom} */
+  export const VerticalJustifyBottom = VerticalJustify.Bottom;
+  export type VerticalJustifyBottom = typeof VerticalJustifyBottom;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Add} */
+  export const Add = RangeSelectorMode.Add;
+  export type Add = typeof Add;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Subtract} */
+  export const Subtract = RangeSelectorMode.Subtract;
+  export type Subtract = typeof Subtract;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Intersect} */
+  export const Intersect = RangeSelectorMode.Intersect;
+  export type Intersect = typeof Intersect;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Min} */
+  export const Min = RangeSelectorMode.Min;
+  export type Min = typeof Min;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Max} */
+  export const Max = RangeSelectorMode.Max;
+  export type Max = typeof Max;
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Difference} */
+  export const Difference = RangeSelectorMode.Difference;
+  export type Difference = typeof Difference;
 }

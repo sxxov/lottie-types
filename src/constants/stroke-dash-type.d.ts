@@ -1,18 +1,23 @@
+import { Helpers } from "../helpers";
+
 /**
  * Type of a dash item in a stroked line
  */
-export declare enum StrokeDashType {
-  Default = "d",
-  Gap = "g",
-  Offset = "o",
-}
-export declare namespace StrokeDashType {
-  type Value = StrokeDashType;
+export type StrokeDashType = Helpers.Values<typeof StrokeDashType>;
+export namespace StrokeDashType {
+  export type Value = StrokeDashType;
 
-  /** @deprecated Use the {@linkcode StrokeDashType} enum */
-  const enum VALUE {
-    DEFAULT = StrokeDashType.Default,
-    GAP = StrokeDashType.Gap,
-    OFFSET = StrokeDashType.Offset,
+  export const Default = "d";
+  export type Default = typeof Default;
+  export const Gap = "g";
+  export type Gap = typeof Gap;
+  export const Offset = "o";
+  export type Offset = typeof Offset;
+
+  /** @deprecated Use the {@linkcode StrokeDashType} namespace */
+  export const enum VALUE {
+    DEFAULT = Default,
+    GAP = Gap,
+    OFFSET = Offset,
   }
 }

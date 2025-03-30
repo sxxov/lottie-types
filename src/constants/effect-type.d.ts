@@ -1,41 +1,59 @@
-export declare enum EffectType {
-  Custom = 5,
-  PaintOverTransparent = 7,
-  Tint = 20,
-  Fill = 21,
-  Stroke = 22,
-  Tritone = 23,
-  ProLevels = 24,
-  DropShadow = 25,
-  RadialWipe = 26,
-  DisplacementMap = 27,
-  Matte3 = 28,
-  GaussianBlur = 29,
-  MeshWarp = 31,
-  Wavy = 32,
-  Spherize = 33,
-  Puppet = 34,
-}
-export declare namespace EffectType {
-  type Value = EffectType;
+import { Helpers } from "../helpers";
 
-  /** @deprecated Use the {@linkcode EffectType} enum */
-  const enum VALUE {
-    CUSTOM = EffectType.Custom,
-    PAINT_OVER_TRANSPARENT = EffectType.PaintOverTransparent,
-    TINT = EffectType.Tint,
-    FILL = EffectType.Fill,
-    STROKE = EffectType.Stroke,
-    TRITONE = EffectType.Tritone,
-    PRO_LEVELS = EffectType.ProLevels,
-    DROP_SHADOW = EffectType.DropShadow,
-    RADIAL_WIPE = EffectType.RadialWipe,
-    DISPLACEMENT_MAP = EffectType.DisplacementMap,
-    MATTE3 = EffectType.Matte3,
-    GAUSSIAN_BLUR = EffectType.GaussianBlur,
-    MESH_WARP = EffectType.MeshWarp,
-    WAVY = EffectType.Wavy,
-    SPHERIZE = EffectType.Spherize,
-    PUPPET = EffectType.Puppet,
+export type EffectType = Helpers.Values<typeof EffectType>;
+export namespace EffectType {
+  export type Value = EffectType;
+
+  export const Custom = 5;
+  export type Custom = typeof Custom;
+  export const PaintOverTransparent = 7;
+  export type PaintOverTransparent = typeof PaintOverTransparent;
+  export const Tint = 20;
+  export type Tint = typeof Tint;
+  export const Fill = 21;
+  export type Fill = typeof Fill;
+  export const Stroke = 22;
+  export type Stroke = typeof Stroke;
+  export const Tritone = 23;
+  export type Tritone = typeof Tritone;
+  export const ProLevels = 24;
+  export type ProLevels = typeof ProLevels;
+  export const DropShadow = 25;
+  export type DropShadow = typeof DropShadow;
+  export const RadialWipe = 26;
+  export type RadialWipe = typeof RadialWipe;
+  export const DisplacementMap = 27;
+  export type DisplacementMap = typeof DisplacementMap;
+  export const Matte3 = 28;
+  export type Matte3 = typeof Matte3;
+  export const GaussianBlur = 29;
+  export type GaussianBlur = typeof GaussianBlur;
+  export const MeshWarp = 31;
+  export type MeshWarp = typeof MeshWarp;
+  export const Wavy = 32;
+  export type Wavy = typeof Wavy;
+  export const Spherize = 33;
+  export type Spherize = typeof Spherize;
+  export const Puppet = 34;
+  export type Puppet = typeof Puppet;
+
+  /** @deprecated Use the {@linkcode EffectType} namespace */
+  export const enum VALUE {
+    CUSTOM = Custom,
+    PAINT_OVER_TRANSPARENT = PaintOverTransparent,
+    TINT = Tint,
+    FILL = Fill,
+    STROKE = Stroke,
+    TRITONE = Tritone,
+    PRO_LEVELS = ProLevels,
+    DROP_SHADOW = DropShadow,
+    RADIAL_WIPE = RadialWipe,
+    DISPLACEMENT_MAP = DisplacementMap,
+    MATTE3 = Matte3,
+    GAUSSIAN_BLUR = GaussianBlur,
+    MESH_WARP = MeshWarp,
+    WAVY = Wavy,
+    SPHERIZE = Spherize,
+    PUPPET = Puppet,
   }
 }

@@ -1,26 +1,35 @@
-export declare enum EffectValueType {
-  Slider = 0,
-  Angle = 1,
-  Color = 2,
-  Point = 3,
-  Checkbox = 4,
-  Ignored = 6,
-  Dropdown = 7,
-  Layer = 10,
-}
+import { Helpers } from "../helpers";
 
-export declare namespace EffectValueType {
-  type Value = EffectValueType;
+export type EffectValueType = Helpers.Values<typeof EffectValueType>;
+export namespace EffectValueType {
+  export type Value = EffectValueType;
 
-  /** @deprecated Use the {@linkcode EffectValueType} enum */
-  const enum VALUE {
-    SLIDER = EffectValueType.Slider,
-    ANGLE = EffectValueType.Angle,
-    COLOR = EffectValueType.Color,
-    POINT = EffectValueType.Point,
-    CHECKBOX = EffectValueType.Checkbox,
-    IGNORED = EffectValueType.Ignored,
-    DROPDOWN = EffectValueType.Dropdown,
-    LAYER = EffectValueType.Layer,
+  export const Slider = 0;
+  export type Slider = typeof Slider;
+  export const Angle = 1;
+  export type Angle = typeof Angle;
+  export const Color = 2;
+  export type Color = typeof Color;
+  export const Point = 3;
+  export type Point = typeof Point;
+  export const Checkbox = 4;
+  export type Checkbox = typeof Checkbox;
+  export const Ignored = 6;
+  export type Ignored = typeof Ignored;
+  export const Dropdown = 7;
+  export type Dropdown = typeof Dropdown;
+  export const Layer = 10;
+  export type Layer = typeof Layer;
+
+  /** @deprecated Use the {@linkcode EffectValueType} namespace */
+  export const enum VALUE {
+    SLIDER = Slider,
+    ANGLE = Angle,
+    COLOR = Color,
+    POINT = Point,
+    CHECKBOX = Checkbox,
+    IGNORED = Ignored,
+    DROPDOWN = Dropdown,
+    LAYER = Layer,
   }
 }

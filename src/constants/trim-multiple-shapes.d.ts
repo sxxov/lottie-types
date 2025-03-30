@@ -1,16 +1,20 @@
+import { Helpers } from "../helpers";
+
 /**
  * How to handle multiple shapes in trim path
  */
-export declare enum TrimMultipleShapes {
-  Individually = 1,
-  Simultaneously = 2,
-}
-export declare namespace TrimMultipleShapes {
-  type Value = TrimMultipleShapes;
+export type TrimMultipleShapes = Helpers.Values<typeof TrimMultipleShapes>;
+export namespace TrimMultipleShapes {
+  export type Value = TrimMultipleShapes;
 
-  /** @deprecated Use the {@linkcode TrimMultipleShapes} enum */
-  const enum VALUES {
-    INDIVIDUALLY = TrimMultipleShapes.Individually,
-    SIMULTANEOUSLY = TrimMultipleShapes.Simultaneously,
+  export const Individually = 1;
+  export type Individually = typeof Individually;
+  export const Simultaneously = 2;
+  export type Simultaneously = typeof Simultaneously;
+
+  /** @deprecated Use the {@linkcode TrimMultipleShapes} namespace */
+  export const enum VALUES {
+    INDIVIDUALLY = Individually,
+    SIMULTANEOUSLY = Simultaneously,
   }
 }
