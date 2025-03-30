@@ -1,14 +1,16 @@
+/**
+ * How to handle multiple shapes in trim path
+ */
+export declare enum TrimMultipleShapes {
+  Individually = 1,
+  Simultaneously = 2,
+}
 export declare namespace TrimMultipleShapes {
-  /**
-   * How to handle multiple shapes in trim path
-   */
-  type Value = Individually | Simultaneously;
+  type Value = TrimMultipleShapes;
 
-  type Individually = 1;
-  type Simultaneously = 2;
-
+  /** @deprecated Use the {@linkcode TrimMultipleShapes} enum */
   const enum VALUES {
-    INDIVIDUALLY = 1,
-    SIMULTANEOUSLY = 2,
+    INDIVIDUALLY = TrimMultipleShapes.Individually,
+    SIMULTANEOUSLY = TrimMultipleShapes.Simultaneously,
   }
 }

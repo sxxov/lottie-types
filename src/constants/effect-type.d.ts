@@ -1,55 +1,41 @@
+export declare enum EffectType {
+  Custom = 5,
+  PaintOverTransparent = 7,
+  Tint = 20,
+  Fill = 21,
+  Stroke = 22,
+  Tritone = 23,
+  ProLevels = 24,
+  DropShadow = 25,
+  RadialWipe = 26,
+  DisplacementMap = 27,
+  Matte3 = 28,
+  GaussianBlur = 29,
+  MeshWarp = 31,
+  Wavy = 32,
+  Spherize = 33,
+  Puppet = 34,
+}
 export declare namespace EffectType {
-  type Value =
-    | DropShadow
-    | Fill
-    | GaussianBlur
-    | Matte3
-    | ProLevels
-    | Stroke
-    | Tint
-    | Tritone
-    | RadialWipe
-    | Wavy
-    | Puppet
-    | Spherize
-    | PaintOverTransparent
-    | MeshWarp
-    | DisplacementMap
-    | Custom;
+  type Value = EffectType;
 
-  type DropShadow = 25;
-  type Fill = 21;
-  type GaussianBlur = 29;
-  type Matte3 = 28;
-  type ProLevels = 24;
-  type Stroke = 22;
-  type Tint = 20;
-  type Tritone = 23;
-  type RadialWipe = 26;
-  type Wavy = 32;
-  type Puppet = 34;
-  type Spherize = 33;
-  type PaintOverTransparent = 7;
-  type MeshWarp = 31;
-  type DisplacementMap = 27;
-  type Custom = 5;
-
+  /** @deprecated Use the {@linkcode EffectType} enum */
   const enum VALUE {
-    DROP_SHADOW = 25,
-    FILL = 21,
-    GAUSSIAN_BLUR = 29,
-    MATTE3 = 28,
-    PRO_LEVELS = 24,
-    STROKE = 22,
-    TINT = 20,
-    TRITONE = 23,
-    RADIAL_WIPE = 26,
-    WAVY = 32,
-    PUPPET = 34,
-    SPHERIZE = 33,
-    PAINT_OVER_TRANSPARENT = 7,
-    MESH_WARP = 31,
-    DISPLACEMENT_MAP = 27,
-    CUSTOM = 5,
+    CUSTOM = EffectType.Custom,
+    PAINT_OVER_TRANSPARENT = EffectType.PaintOverTransparent,
+    TINT = EffectType.Tint,
+    FILL = EffectType.Fill,
+    STROKE = EffectType.Stroke,
+    TRITONE = EffectType.Tritone,
+    PRO_LEVELS = EffectType.ProLevels,
+    DROP_SHADOW = EffectType.DropShadow,
+    RADIAL_WIPE = EffectType.RadialWipe,
+    DISPLACEMENT_MAP = EffectType.DisplacementMap,
+    MATTE3 = EffectType.Matte3,
+    GAUSSIAN_BLUR = EffectType.GaussianBlur,
+    MESH_WARP = EffectType.MeshWarp,
+    WAVY = EffectType.Wavy,
+    SPHERIZE = EffectType.Spherize,
+    PUPPET = EffectType.Puppet,
   }
 }

@@ -1,41 +1,134 @@
-export declare namespace TextType {
-  type Based = Characters | CharacterExcludingSpaces | Words | Lines;
-  type Characters = 1;
-  type CharacterExcludingSpaces = 2;
-  type Words = 3;
-  type Lines = 4;
+export declare enum TextType {
+  // Text type
+  /** @deprecated Use {@linkcode TextType.Based.Characters} */
+  Characters = TextType.Based.Characters,
+  /** @deprecated Use {@linkcode TextType.Based.CharacterExcludingSpaces} */
+  CharacterExcludingSpaces = TextType.Based.CharacterExcludingSpaces,
+  /** @deprecated Use {@linkcode TextType.Based.Words} */
+  Words = TextType.Based.Words,
+  /** @deprecated Use {@linkcode TextType.Based.Lines} */
+  Lines = TextType.Based.Lines,
 
+  // Text caps
+  /** @deprecated Use {@linkcode TextType.Caps.Regular} */
+  Regular = TextType.Caps.Regular,
+  /** @deprecated Use {@linkcode TextType.Caps.AllCaps} */
+  AllCaps = TextType.Caps.AllCaps,
+  /** @deprecated Use {@linkcode TextType.Caps.SmallCaps} */
+  SmallCaps = TextType.Caps.SmallCaps,
+
+  // Grouping
+  /** @deprecated Use {@linkcode TextType.Grouping.Word} */
+  Word = TextType.Grouping.Word,
+  /** @deprecated Use {@linkcode TextType.Grouping.Line} */
+  Line = TextType.Grouping.Line,
+  /** @deprecated Use {@linkcode TextType.Grouping.All} */
+  All = TextType.Grouping.All,
+
+  // Justify
+  /** @deprecated Use {@linkcode TextType.Justify.Left} */
+  Left = TextType.Justify.Left,
+  /** @deprecated Use {@linkcode TextType.Justify.Right} */
+  Right = TextType.Justify.Right,
+  /** @deprecated Use {@linkcode TextType.Justify.Center} */
+  Center = TextType.Justify.Center,
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineLeft} */
+  WithLastLineLeft = TextType.Justify.WithLastLineLeft,
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineRight} */
+  WithLastLineRight = TextType.Justify.WithLastLineRight,
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineCenter} */
+  WithLastLineCenter = TextType.Justify.WithLastLineCenter,
+  /** @deprecated Use {@linkcode TextType.Justify.WithLastLineFull} */
+  WithLastLineFull = TextType.Justify.WithLastLineFull,
+
+  // Shape
+  /** @deprecated Use {@linkcode TextType.Shape.Square} */
+  Square = TextType.Shape.Square,
+  /** @deprecated Use {@linkcode TextType.Shape.RampUp} */
+  RampUp = TextType.Shape.RampUp,
+  /** @deprecated Use {@linkcode TextType.Shape.RampDown} */
+  RampDown = TextType.Shape.RampDown,
+  /** @deprecated Use {@linkcode TextType.Shape.Triangle} */
+  Triangle = TextType.Shape.Triangle,
+  /** @deprecated Use {@linkcode TextType.Shape.Round} */
+  Round = TextType.Shape.Round,
+  /** @deprecated Use {@linkcode TextType.Shape.Smooth} */
+  Smooth = TextType.Shape.Smooth,
+
+  // Font path origin
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.Local} */
+  Local = TextType.FontPathOrigin.Local,
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.CssUrl} */
+  CssUrl = TextType.FontPathOrigin.CssUrl,
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.ScriptUrl} */
+  ScriptUrl = TextType.FontPathOrigin.ScriptUrl,
+  /** @deprecated Use {@linkcode TextType.FontPathOrigin.FontUrl} */
+  FontUrl = TextType.FontPathOrigin.FontUrl,
+
+  // Vertical justify
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Top} */
+  VerticalJustifyTop = TextType.VerticalJustify.Top,
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Center} */
+  VerticalJustifyCenter = TextType.VerticalJustify.Center,
+  /** @deprecated Use {@linkcode TextType.VerticalJustify.Bottom} */
+  VerticalJustifyBottom = TextType.VerticalJustify.Bottom,
+
+  // Range selector mode
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Add} */
+  Add = TextType.RangeSelectorMode.Add,
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Subtract} */
+  Subtract = TextType.RangeSelectorMode.Subtract,
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Intersect} */
+  Intersect = TextType.RangeSelectorMode.Intersect,
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Min} */
+  Min = TextType.RangeSelectorMode.Min,
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Max} */
+  Max = TextType.RangeSelectorMode.Max,
+  /** @deprecated Use {@linkcode TextType.RangeSelectorMode.Difference} */
+  Difference = TextType.RangeSelectorMode.Difference,
+}
+export declare namespace TextType {
+  enum Based {
+    Characters = 1,
+    CharacterExcludingSpaces = 2,
+    Words = 3,
+    Lines = 4,
+  }
+  /** @deprecated Use the {@linkcode TextType.Based} enum */
   const enum BASED {
-    CHARACTERS = 1,
-    CHARACTER_EXCLUDING_SPACES = 2,
-    WORDS = 3,
-    LINES = 4,
+    CHARACTERS = Based.Characters,
+    CHARACTER_EXCLUDING_SPACES = Based.CharacterExcludingSpaces,
+    WORDS = Based.Words,
+    LINES = Based.Lines,
   }
 
   /**
    * @default 0
    */
-  type Caps = Regular | AllCaps | SmallCaps;
-  type Regular = 0;
-  type AllCaps = 1;
-  type SmallCaps = 2;
-
+  enum Caps {
+    Regular = 0,
+    AllCaps = 1,
+    SmallCaps = 2,
+  }
+  /** @deprecated Use the {@linkcode TextType.Caps} enum */
   const enum TEXT_CAPS {
-    REGULAR = 0,
-    ALL_CAPS = 1,
-    SMALL_CAPS = 2,
+    REGULAR = Caps.Regular,
+    ALL_CAPS = Caps.AllCaps,
+    SMALL_CAPS = Caps.SmallCaps,
   }
 
-  type Grouping = Characters | Word | Line | All;
-  type Word = 2;
-  type Line = 3;
-  type All = 4;
-
+  enum Grouping {
+    Characters = 1,
+    Word = 2,
+    Line = 3,
+    All = 4,
+  }
+  /** @deprecated Use the {@linkcode TextType.Grouping} enum */
   const enum GROUPING {
-    CHARACTERS = 1,
-    WORD = 2,
-    LINE = 3,
-    ALL = 4,
+    CHARACTERS = Grouping.Characters,
+    WORD = Grouping.Word,
+    LINE = Grouping.Line,
+    ALL = Grouping.All,
   }
 
   /**
@@ -43,93 +136,85 @@ export declare namespace TextType {
    *
    * @default 0
    */
-  type Justify =
-    | Left
-    | Right
-    | Center
-    | WithLastLineLeft
-    | WithLastLineRight
-    | WithLastLineCenter
-    | WithLastLineFull;
-
-  type Left = 0;
-  type Right = 1;
-  type Center = 2;
-  type WithLastLineLeft = 3;
-  type WithLastLineRight = 4;
-  type WithLastLineCenter = 5;
-  type WithLastLineFull = 6;
-
+  enum Justify {
+    Left = 0,
+    Right = 1,
+    Center = 2,
+    WithLastLineLeft = 3,
+    WithLastLineRight = 4,
+    WithLastLineCenter = 5,
+    WithLastLineFull = 6,
+  }
+  /** @deprecated Use the {@linkcode TextType.Justify} enum */
   const enum JUSTIFY {
-    LEFT = 0,
-    RIGHT = 1,
-    CENTER = 2,
-    WITH_LAST_LINE_LEFT = 3,
-    WITH_LAST_LINE_RIGHT = 4,
-    WITH_LAST_LINE_CENTER = 5,
-    WITH_LAST_LINE_FULL = 6,
+    LEFT = Justify.Left,
+    RIGHT = Justify.Right,
+    CENTER = Justify.Center,
+    WITH_LAST_LINE_LEFT = Justify.WithLastLineLeft,
+    WITH_LAST_LINE_RIGHT = Justify.WithLastLineRight,
+    WITH_LAST_LINE_CENTER = Justify.WithLastLineCenter,
+    WITH_LAST_LINE_FULL = Justify.WithLastLineFull,
   }
 
-  type Shape = Square | RampUp | RampDown | Triangle | Round | Smooth;
-  type Square = 1;
-  type RampUp = 2;
-  type RampDown = 3;
-  type Triangle = 4;
-  type Round = 5;
-  type Smooth = 6;
-
+  enum Shape {
+    Square = 1,
+    RampUp = 2,
+    RampDown = 3,
+    Triangle = 4,
+    Round = 5,
+    Smooth = 6,
+  }
+  /** @deprecated Use the {@linkcode TextType.Shape} enum */
   const enum SHAPE {
-    SQUARE = 1,
-    RAMP_UP = 2,
-    RAMP_DOWN = 3,
-    TRIANGLE = 4,
-    ROUND = 5,
-    SMOOTH = 6,
+    SQUARE = Shape.Square,
+    RAMP_UP = Shape.RampUp,
+    RAMP_DOWN = Shape.RampDown,
+    TRIANGLE = Shape.Triangle,
+    ROUND = Shape.Round,
+    SMOOTH = Shape.Smooth,
   }
 
-  type FontPathOrigin = Local | CssUrl | ScriptUrl | FontUrl;
-  type Local = 0;
-  type CssUrl = 1;
-  type ScriptUrl = 2;
-  type FontUrl = 3;
-
-  const enum FONT_PATH_ORIGIN {
-    LOCAL = 0,
-    CSS_URL = 1,
-    SCRIPT_URL = 2,
-    FONT_URL = 3,
+  enum FontPathOrigin {
+    Local = 0,
+    CssUrl = 1,
+    ScriptUrl = 2,
+    FontUrl = 3,
+  }
+  /** @deprecated Use the {@linkcode TextType.FontPathOrigin} enum */
+  enum FONT_PATH_ORIGIN {
+    LOCAL = FontPathOrigin.Local,
+    CSS_URL = FontPathOrigin.CssUrl,
+    SCRIPT_URL = FontPathOrigin.ScriptUrl,
+    FONT_URL = FontPathOrigin.FontUrl,
   }
 
-  type VerticalJustify =
-    | VerticalJustifyTop
-    | VerticalJustifyCenter
-    | VerticalJustifyBottom;
-
-  type VerticalJustifyTop = 0;
-  type VerticalJustifyCenter = 1;
-  type VerticalJustifyBottom = 2;
-
+  enum VerticalJustify {
+    Top = 0,
+    Center = 1,
+    Bottom = 2,
+  }
+  /** @deprecated Use the {@linkcode TextType.VerticalJustify} enum */
   const enum VERTICAL_JUSTIFY {
-    TOP = 0,
-    CENTER = 1,
-    BOTTOM = 2,
+    TOP = VerticalJustify.Top,
+    CENTER = VerticalJustify.Center,
+    BOTTOM = VerticalJustify.Bottom,
   }
 
-  type RangeSelectorMode = Add | Subtract | Intersect | Min | Max | Difference;
-
-  type Add = 0;
-  type Subtract = 1;
-  type Intersect = 2;
-  type Min = 3;
-  type Max = 4;
-  type Difference = 5;
-
-  enum RANGE_SELECTOR_MODE {
-    ADD = 0,
-    SUBTRACT = 1,
-    INTERSECT = 2,
-    MIN = 3,
-    MAX = 4,
-    DIFFERENCE = 5,
+  enum RangeSelectorMode {
+    Add = 0,
+    Subtract = 1,
+    Intersect = 2,
+    Min = 3,
+    Max = 4,
+    Difference = 5,
+  }
+  /** @deprecated Use the {@linkcode TextType.RangeSelectorMode} enum */
+  const enum RANGE_SELECTOR_MODE {
+    ADD = RangeSelectorMode.Add,
+    SUBTRACT = RangeSelectorMode.Subtract,
+    INTERSECT = RangeSelectorMode.Intersect,
+    MIN = RangeSelectorMode.Min,
+    MAX = RangeSelectorMode.Max,
+    DIFFERENCE = RangeSelectorMode.Difference,
   }
 }

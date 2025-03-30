@@ -1,55 +1,42 @@
+export declare enum LayerType {
+  Precomposition = 0,
+  SolidColor = 1,
+  Image = 2,
+  Null = 3,
+  Shape = 4,
+  Text = 5,
+  Audio = 6,
+  VideoPlaceholder = 7,
+  ImageSequence = 8,
+  Video = 9,
+  ImagePlaceholder = 10,
+  Guide = 11,
+  Adjustment = 12,
+  Camera = 13,
+  Light = 14,
+  Data = 15,
+}
+
 export declare namespace LayerType {
-  type Value =
-    | Precomposition
-    | SolidColor
-    | Image
-    | Null
-    | Shape
-    | Text
-    | Audio
-    | VideoPlaceholder
-    | ImageSequence
-    | Video
-    | ImagePlaceholder
-    | Guide
-    | Adjustment
-    | Camera
-    | Light
-    | Data;
+  type Value = LayerType;
 
-  type Precomposition = 0;
-  type SolidColor = 1;
-  type Image = 2;
-  type Null = 3;
-  type Shape = 4;
-  type Text = 5;
-  type Audio = 6;
-  type VideoPlaceholder = 7;
-  type ImageSequence = 8;
-  type Video = 9;
-  type ImagePlaceholder = 10;
-  type Guide = 11;
-  type Adjustment = 12;
-  type Camera = 13;
-  type Light = 14;
-  type Data = 15;
-
+  /** @deprecated Use the {@linkcode LayerType} enum */
   const enum VALUE {
-    PRECOMPOSITION = 0,
-    SOLID_COLOR = 1,
-    IMAGE = 2,
-    NULL = 3,
-    SHAPE = 4,
-    TEXT = 5,
-    AUDIO = 6,
-    VIDEO_PLACEHOLDER = 7,
-    IMAGE_SEQUENCE = 8,
-    VIDEO = 9,
-    IMAGE_PLACEHOLDER = 10,
-    GUIDE = 11,
-    ADJUSTMENT = 12,
-    CAMERA = 13,
-    LIGHT = 14,
-    DATA = 15,
+    PRECOMPOSITION = LayerType.Precomposition,
+    SOLID_COLOR = LayerType.SolidColor,
+    IMAGE = LayerType.Image,
+    NULL = LayerType.Null,
+    SHAPE = LayerType.Shape,
+    TEXT = LayerType.Text,
+    AUDIO = LayerType.Audio,
+    VIDEO_PLACEHOLDER = LayerType.VideoPlaceholder,
+    IMAGE_SEQUENCE = LayerType.ImageSequence,
+    VIDEO = LayerType.Video,
+    IMAGE_PLACEHOLDER = LayerType.ImagePlaceholder,
+    GUIDE = LayerType.Guide,
+    ADJUSTMENT = LayerType.Adjustment,
+    CAMERA = LayerType.Camera,
+    LIGHT = LayerType.Light,
+    DATA = LayerType.Data,
   }
 }

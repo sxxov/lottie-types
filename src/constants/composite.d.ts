@@ -1,14 +1,16 @@
+/**
+ * How to stack copies in a repeater
+ */
+export declare enum Composite {
+  Above = 1,
+  Below = 2,
+}
 export declare namespace Composite {
-  /**
-   * How to stack copies in a repeater
-   */
-  type Value = Above | Below;
+  type Value = Composite;
 
-  type Above = 1;
-  type Below = 2;
-
+  /** @deprecated Use the {@linkcode Composite} enum */
   const enum VALUE {
-    ABOVE = 1,
-    BELOW = 2,
+    ABOVE = Composite.Above,
+    BELOW = Composite.Below,
   }
 }

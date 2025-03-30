@@ -1,16 +1,18 @@
+/**
+ * Style at the end of a stoked line
+ */
+export declare enum LineCap {
+  Butt = 1,
+  Round = 2,
+  Square = 3,
+}
 export declare namespace LineCap {
-  /**
-   * Style at the end of a stoked line
-   */
-  type Value = Butt | Round | Square;
+  type Value = LineCap;
 
-  type Butt = 1;
-  type Round = 2;
-  type Square = 3;
-
+  /** @deprecated Use the {@linkcode LineCap} enum */
   const enum VALUE {
-    BUTT = 1,
-    ROUND = 2,
-    SQUARE = 3,
+    BUTT = LineCap.Butt,
+    ROUND = LineCap.Round,
+    SQUARE = LineCap.Square,
   }
 }

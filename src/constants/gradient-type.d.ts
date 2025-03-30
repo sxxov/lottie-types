@@ -1,16 +1,19 @@
+/**
+ * Type of a gradient
+ *
+ * @default 1
+ */
+export declare enum GradientType {
+  Linear = 1,
+  Radial = 2,
+}
+
 export declare namespace GradientType {
-  /**
-   * Type of a gradient
-   *
-   * @default 1
-   */
-  type Value = Linear | Radial;
+  type Value = GradientType;
 
-  type Linear = 1;
-  type Radial = 2;
-
+  /** @deprecated Use the {@linkcode GradientType} enum */
   const enum VALUE {
-    LINEAR = 1,
-    RADIAL = 2,
+    LINEAR = GradientType.Linear,
+    RADIAL = GradientType.Radial,
   }
 }

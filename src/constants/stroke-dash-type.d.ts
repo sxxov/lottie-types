@@ -1,16 +1,18 @@
+/**
+ * Type of a dash item in a stroked line
+ */
+export declare enum StrokeDashType {
+  Default = "d",
+  Gap = "g",
+  Offset = "o",
+}
 export declare namespace StrokeDashType {
-  /**
-   * Type of a dash item in a stroked line
-   */
-  type Value = Default | Gap | Offset;
+  type Value = StrokeDashType;
 
-  type Default = "d";
-  type Gap = "g";
-  type Offset = "o";
-
+  /** @deprecated Use the {@linkcode StrokeDashType} enum */
   const enum VALUE {
-    DEFAULT = "d",
-    GAP = "g",
-    OFFSET = "o",
+    DEFAULT = StrokeDashType.Default,
+    GAP = StrokeDashType.Gap,
+    OFFSET = StrokeDashType.Offset,
   }
 }

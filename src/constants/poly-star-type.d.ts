@@ -1,14 +1,16 @@
+/**
+ * Star type, `1` for Star, `2` for Polygon
+ */
+export declare enum PolyStarType {
+  Star = 1,
+  Polygon = 2,
+}
 export declare namespace PolyStarType {
-  /**
-   * Star type, `1` for Star, `2` for Polygon
-   */
-  type Value = Star | Polygon;
+  type Value = PolyStarType;
 
-  type Star = 1;
-  type Polygon = 2;
-
+  /** @deprecated Use the {@linkcode PolyStarType} enum */
   const enum VALUE {
-    STAR = 1,
-    POLYGON = 2,
+    STAR = PolyStarType.Star,
+    POLYGON = PolyStarType.Polygon,
   }
 }

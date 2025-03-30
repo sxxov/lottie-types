@@ -1,20 +1,22 @@
+/**
+ * How a layer should mask another layer
+ */
+export declare enum MatteMode {
+  Normal = 0,
+  Alpha = 1,
+  InvertedAlpha = 2,
+  Luma = 3,
+  InvertedLuma = 4,
+}
 export declare namespace MatteMode {
-  /**
-   * How a layer should mask another layer
-   */
-  type Value = Normal | Alpha | InvertedAlpha | Luma | InvertedLuma;
+  type Value = MatteMode;
 
-  type Normal = 0;
-  type Alpha = 1;
-  type InvertedAlpha = 2;
-  type Luma = 3;
-  type InvertedLuma = 4;
-
+  /** @deprecated Use the {@linkcode MatteMode} enum */
   const enum VALUE {
-    NORMAL = 0,
-    ALPHA = 1,
-    INVERTED_ALPHA = 2,
-    LUMA = 3,
-    INVERTED_LUMA = 4,
+    NORMAL = MatteMode.Normal,
+    ALPHA = MatteMode.Alpha,
+    INVERTED_ALPHA = MatteMode.InvertedAlpha,
+    LUMA = MatteMode.Luma,
+    INVERTED_LUMA = MatteMode.InvertedLuma,
   }
 }

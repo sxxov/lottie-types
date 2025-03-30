@@ -1,64 +1,47 @@
+export declare enum ShapeType {
+  Rectangle = "rc",
+  Ellipse = "el",
+  PolygonStar = "sr",
+  Path = "sh",
+  Fill = "fl",
+  Stroke = "st",
+  GradientFill = "gf",
+  GradientStroke = "gs",
+  Group = "gr",
+  Transform = "tr",
+  RoundedCorners = "rd",
+  PuckerBloat = "pb",
+  Merge = "mm",
+  Twist = "tw",
+  OffsetPath = "op",
+  ZigZag = "zz",
+  Modifier = "", // null
+  Repeater = "rp",
+  Trim = "tm",
+}
 export declare namespace ShapeType {
-  type Value =
-    | Rectangle
-    | Ellipse
-    | PolygonStar
-    | Path
-    | Fill
-    | Stroke
-    | GradientFill
-    | GradientStroke
-    | Group
-    | Transform
-    | RoundedCorners
-    | PuckerBloat
-    | Merge
-    | Twist
-    | OffsetPath
-    | ZigZag
-    | Modifier
-    | Repeater
-    | Trim;
+  type Value = ShapeType;
 
-  type Rectangle = "rc";
-  type Ellipse = "el";
-  type PolygonStar = "sr";
-  type Path = "sh";
-  type Fill = "fl";
-  type Stroke = "st";
-  type GradientFill = "gf";
-  type GradientStroke = "gs";
-  type Group = "gr";
-  type Transform = "tr";
-  type RoundedCorners = "rd";
-  type PuckerBloat = "pb";
-  type Merge = "mm";
-  type Twist = "tw";
-  type OffsetPath = "op";
-  type ZigZag = "zz";
-  type Modifier = ""; // null
-  type Repeater = "rp";
-  type Trim = "tm";
-
+  /** @deprecated Use the {@linkcode ShapeType} enum */
   const enum VALUE {
-    RECTANGLE = "rc",
-    ELLIPSE = "el",
-    POLYGON_STAR = "sr",
-    PATH = "sh",
-    FILL = "fl",
-    STROKE = "st",
-    GRADIENT_FILL = "gf",
-    GRADIENT_STROKE = "gs",
-    GROUP = "gr",
-    TRANSFORM = "tr",
-    ROUNDED_CORNERS = "rd",
-    PUCKER_BLOAT = "pb",
-    MERGE = "mm",
-    TWIST = "tw",
-    OFFSET_PATH = "op",
-    ZIG_ZAG = "zz",
-    MODIFIER = "", // null
-    REPEATER = "rp",
-    TRIM = "tm",
+    RECTANGLE = ShapeType.Rectangle,
+    ELLIPSE = ShapeType.Ellipse,
+    POLYGON_STAR = ShapeType.PolygonStar,
+    PATH = ShapeType.Path,
+    FILL = ShapeType.Fill,
+    STROKE = ShapeType.Stroke,
+    GRADIENT_FILL = ShapeType.GradientFill,
+    GRADIENT_STROKE = ShapeType.GradientStroke,
+    GROUP = ShapeType.Group,
+    TRANSFORM = ShapeType.Transform,
+    ROUNDED_CORNERS = ShapeType.RoundedCorners,
+    PUCKER_BLOAT = ShapeType.PuckerBloat,
+    MERGE = ShapeType.Merge,
+    TWIST = ShapeType.Twist,
+    OFFSET_PATH = ShapeType.OffsetPath,
+    ZIG_ZAG = ShapeType.ZigZag,
+    MODIFIER = ShapeType.Modifier,
+    REPEATER = ShapeType.Repeater,
+    TRIM = ShapeType.Trim,
   }
 }
